@@ -1,0 +1,13 @@
+---
+aws_region: eu-central-1
+
+# Ubuntu 18.04
+ami_id: ami-0b1deee75235aa4bb
+
+# Instance type
+instance_type: t2.micro
+
+# Key pair name
+key_name: genesis-key
+
+
