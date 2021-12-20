@@ -17,5 +17,8 @@ jobs:
       - name: Execute Ansible Playbook
         run: |
           sudo apt install ansible &&
-          ansible-playbook -v -e aws_access_key=${{ secrets.aws_access_key }} -e aws_secret_key=${{ secrets.aws_secret_key }} genesis.yaml
+          ansible-playbook -v \
+          -e aws_access_key=${{ secrets.aws_access_key }} \
+          -e aws_secret_key=${{ secrets.aws_secret_key }} \
+          genesis.yaml
         
