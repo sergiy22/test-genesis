@@ -6,7 +6,7 @@
     - aws-cred.yaml
     - config.yaml
   vars:
-    ansible_python_interpreter: /usr/bin/python
+    ansible_python_interpreter: /usr/bin/python3
 
   tasks:
     - name: Installing boto3 and boto
