@@ -13,16 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install Ansible
+      - run: sudo apt update && sudo apt -y install ansible
       - uses: actions/checkout@v2
       - name: Run playbook
-        uses: dawidd6/action-ansible-playbook@v2
       - run: ls -la
-        with:
-          # Required, playbook filepath
-          playbook: genesis.yml
-          # Optional, additional flags to pass to ansible-playbook
-          options: |
-            --verbose
-            -e aws_access_key=aws_access_key
-            -e aws_secret_key=aws_secret_key
+      - run: ansible-playbook genesis.yaml
+
+
 
