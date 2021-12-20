@@ -14,6 +14,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - run: ls -la
       - name: Run playbook
         uses: dawidd6/action-ansible-playbook@v2
         with:
@@ -25,5 +26,4 @@ jobs:
             -e aws_access_key=aws_access_key
             -e aws_secret_key=aws_secret_key
       
-      - run: ls -la
 
