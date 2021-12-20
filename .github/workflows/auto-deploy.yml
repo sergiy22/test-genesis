@@ -16,9 +16,11 @@ jobs:
       - name: Install Ansible
       - run: sudo apt update && sudo apt -y install ansible
       - uses: actions/checkout@v2
+      - run: ls -la
       - name: Run playbook
       - run: ls -la
       - run: ansible-playbook genesis.yaml
+
 
 
 
