@@ -15,5 +15,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Execute Ansible Playbook
-      - run: sudo apt install ansible
+        run: sudo apt install ansible
         
