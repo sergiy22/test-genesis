@@ -17,6 +17,5 @@ jobs:
       - name: Execute Ansible Playbook
         run: |
           sudo apt install ansible &&
-          which ansible &&
-          ansible-palybook -v genesis.yaml
+          ansible-playbook -v genesis.yaml
         
