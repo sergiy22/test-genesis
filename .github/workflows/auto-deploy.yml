@@ -13,12 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Execute Ansible Playbook
-        run: |
-          sudo apt install ansible &&
-          ansible-playbook -v \
-          -e aws_access_key=${{ secrets.aws_access_key }} \
-          -e aws_secret_key=${{ secrets.aws_secret_key }} \
-          genesis.yaml
-        
+#       - uses: actions/checkout@v1
+#       - name: Execute Ansible Playbook
+#         run: |
+#           sudo apt install ansible &&
+#           ansible-playbook -v \
+#           -e aws_access_key=${{ secrets.aws_access_key }} \
+#           -e aws_secret_key=${{ secrets.aws_secret_key }} \
+#           genesis.yaml
+        - name: test workflow commands
+          run: echo '::set-output name=fruits::apple'
+        - name: Outpur results 
+          run: echo "It is a ${{ steps.outputs.fruits }}"
