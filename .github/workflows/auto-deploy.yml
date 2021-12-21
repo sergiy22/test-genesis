@@ -21,7 +21,10 @@ jobs:
 #           -e aws_access_key=${{ secrets.aws_access_key }} \
 #           -e aws_secret_key=${{ secrets.aws_secret_key }} \
 #           genesis.yaml
-        - name: test workflow commands
-          run: echo '::set-output name=fruits::apple'
-        - name: Outpur results 
-          run: echo "It is a ${{ steps.outputs.fruits }}"
+      - name: toggle workflow command echoing
+        run: |
+          echo '::warning:: this is a warning'
+          echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`"
+          echo '::warning:: this will NOT be a warning'
+          echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
+          echo '::warning:: this is a warning again'
