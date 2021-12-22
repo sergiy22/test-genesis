@@ -19,7 +19,7 @@ jobs:
   download-data-job:
     name: Download data from artifact
     needs: upload-data-job
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Download hello world file
         uses: actions/download-artifact@v1
