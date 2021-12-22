@@ -9,7 +9,7 @@ jobs:
     steps:
       - shell: bash
         run: |
-          echo Hello World! > hello-world.txt
+          echo Hello World! > hello-world/hello-world.txt
       - name: Upload hello world file
         uses: actions/upload-artifact@v1
         with:
