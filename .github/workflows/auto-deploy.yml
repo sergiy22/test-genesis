@@ -14,7 +14,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: hello-world
-          path: hello-world.txt
+          path: hello-world/hello-world.txt
 
   download-data-job:
     name: Download data from artifact
@@ -27,8 +27,8 @@ jobs:
           name: hello-world
       - shell: bash
         run: |
-          value=`cat hello-world.txt`
-          echo $value > hello-world.txt
+          value=`cat hello-world/hello-world.txt`
+          echo $value > hello-world/hello-world.txt
       - name: Upload hello world to artifact
         uses: actions/upload-artifact@v1
         with:
