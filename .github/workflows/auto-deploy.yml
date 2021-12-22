@@ -24,7 +24,7 @@ jobs:
       - name: Download hello world file
         uses: actions/download-artifact@v1
         with:
-          name: hello-world
+          name: hello-world.txt
       - shell: bash
         run: |
           value=`cat hello-world.txt`
