@@ -1,13 +1,7 @@
 name: GitHub Actions Demo
 on:
-  push:
-    branches:
-      - 'main'
-#  pull_request:
-#    branches:
-#      - 'main'
-#    types:
-#      - synchronize
+  pull_request:
+
 jobs:
   Pull-repository-on-server:
     runs-on: ubuntu-latest
